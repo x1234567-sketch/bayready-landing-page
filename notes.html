@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BayReady | CA2 Project Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.7;
+      color: #203047;
+      background: #f7f9fc;
+    }
+    h1, h2 { color: #10253f; }
+    section {
+      background: white;
+      padding: 22px;
+      margin: 20px 0;
+      border-radius: 12px;
+      border: 1px solid #dce4ef;
+    }
+    a { color: #1967d2; }
+    blockquote {
+      border-left: 4px solid #1967d2;
+      padding-left: 16px;
+      margin-left: 0;
+    }
+    li { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+  <p><a href="index.html">← Back to BayReady landing page</a></p>
+  <h1>BayReady — CA2 Project Notes</h1>
+  <p>
+    Student concept for Kehoe's Garage, Enniscorthy,
+    County Wexford. This is an educational prototype
+    using fictional garage jobs.
+  </p>
+
+  <section>
+    <h2>1. Original idea — before AI assistance</h2>
+    <blockquote>
+      Busy car repair businesses will pay for the app because,
+      it saves staff time by updating clients on their car status
+      and it provides an automated way to track parts availability
+      and their arrival estimation, so cars wont be forgotten while
+      waiting for parts.
+    </blockquote>
+    <p>
+      This was my initial hypothesis, not a proven customer
+      finding. The current prototype does not automatically
+      check parts availability or estimate arrival times.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Target customer and problem</h2>
+    <p>
+      Target niche: small independent Irish car repair garages
+      with 3–6 mechanics and one office administrator.
+    </p>
+    <p>
+      The intended buyer is the garage owner or manager.
+      Mechanics need quick status updates; office staff need
+      an overview of jobs; customers want to know their
+      car's repair stage.
+    </p>
+    <p>
+      The existing process may involve paper job cards,
+      verbal updates, phone calls, and manually checking
+      which cars are waiting for parts.
+      These are assumptions to validate with real garages.
+    </p>
+    <p>
+      Technology category: a simple web-based garage
+      job-status tracking application.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Competitor research</h2>
+    <ul>
+      <li>
+        <strong>Garage Hive:</strong>
+        <a href="https://garagehive.ie/">
+          https://garagehive.ie/
+        </a>
+      </li>
+      <li>
+        <strong>TechMan:</strong>
+        <a href="https://www.techmangms.com/">
+          https://www.techmangms.com/
+        </a>
+      </li>
+    </ul>
+    <p>
+      These are existing garage-management software
+      alternatives to investigate. BayReady focuses on
+      a smaller status-tracking prototype rather than
+      claiming to replace a full garage-management system.
+    </p>
+    <p>
+      Research date: 19 October 2026.
+      These links are recorded as research references;
+      detailed competitor feature and price comparisons
+      have not been independently verified here.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Assumed pricing</h2>
+    <p><strong>€99 one-time setup + €29 per month.</strong></p>
+    <p>
+      This is a proposed price for testing the business
+      idea, not a real offer or validated willingness to pay.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Lean product requirements</h2>
+    <ol>
+      <li>
+        Workshop: show at least eight clearly fictional
+        sample jobs with large tap buttons.
+      </li>
+      <li>
+        Workshop: move each job through five repair stages
+        without typing.
+      </li>
+      <li>
+        Customer: look up only the matching sample car
+        by job number or registration.
+      </li>
+      <li>
+        Office: group jobs by stage, flag jobs waiting for
+        parts over two days, and count cars ready to collect.
+      </li>
+      <li>
+        Store demo changes locally in the browser and
+        publish a phone-friendly web prototype.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>6. Alpha prototype</h2>
+    <p>
+      <a href="https://x25181254-sketch.github.io/kehoes-garage-demo/">
+        Open the working Kehoe's Garage demo
+      </a>
+    </p>
+    <p>
+      The demo includes Workshop, Customer, and Office
+      screens. It uses fictional jobs and local browser
+      storage, not a shared live garage database.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Testing completed</h2>
+    <p>Manual browser and mobile testing, 19 October 2026.</p>
+    <ul>
+      <li>Published GitHub Pages demo opened successfully.</li>
+      <li>Workshop displayed fictional sample jobs.</li>
+      <li>Workshop repair-stage buttons changed job status.</li>
+      <li>Job status remained saved after a refresh.</li>
+      <li>Customer lookup worked using only job number KG101.</li>
+      <li>Customer lookup also worked using registration only.</li>
+      <li>Customer lookup showed the matching car only.</li>
+      <li>Office grouped jobs by repair stage.</li>
+      <li>Office showed a red warning for a job waiting
+          more than two days for parts.</li>
+      <li>Ready-to-collect count matched the listed jobs.</li>
+      <li>Website opened and fitted a phone screen.</li>
+      <li>Workshop button was easy to tap on a phone
+          and changed the job status.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Problem, change and retest</h2>
+    <p>
+      <strong>Problem:</strong> Customer search initially
+      required both the job number and registration.
+    </p>
+    <p>
+      <strong>Change:</strong> Updated the search logic
+      so either field could identify a sample job.
+      Uploaded the revised index.html to GitHub.
+    </p>
+    <p>
+      <strong>Retest:</strong> Searching with KG101 alone
+      worked. Searching with a registration alone also
+      worked.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Limitations and next steps</h2>
+    <ul>
+      <li>Fictional jobs only; no real customer data.</li>
+      <li>Browser-local storage; no cross-device syncing.</li>
+      <li>No automatic parts availability or ETA tracking.</li>
+      <li>No automatic customer notifications.</li>
+      <li>Pricing and customer demand are assumptions.</li>
+    </ul>
+    <p>
+      Next steps would be to interview garage owners,
+      test the workflow with real staff, and validate
+      whether garages would pay for the service.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Landing page</h2>
+    <p>
+      The separate BayReady landing page explains the
+      intended customer, proposed benefits and assumed
+      pricing. Its interest form shows a thank-you message
+      only; it does not send or save personal details.
+    </p>
+  </section>
+
+  <p><a href="index.html">← Back to landing page</a></p>
+
+</body>
+</html>
