@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BayReady | Garage Job Tracking</title>
+  <style>
+    :root {
+      --navy: #10253f;
+      --blue: #1967d2;
+      --pale: #edf4ff;
+      --white: #ffffff;
+      --ink: #203047;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+      line-height: 1.6;
+      background: #f7f9fc;
+    }
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    header strong { font-size: 1.5rem; }
+    nav a { color: white; margin-left: 18px; }
+    main { max-width: 1050px; margin: auto; }
+    section { padding: 42px 6%; }
+    .hero { padding-top: 65px; padding-bottom: 65px; }
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.3rem);
+      line-height: 1.15;
+      color: var(--navy);
+    }
+    h2 { color: var(--navy); }
+    .intro { font-size: 1.15rem; max-width: 690px; }
+    .button {
+      display: inline-block;
+      background: var(--blue);
+      color: white;
+      padding: 13px 23px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px 10px 10px 0;
+    }
+    .secondary { background: var(--navy); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #dce4ef;
+      border-radius: 12px;
+      padding: 22px;
+    }
+    .highlight {
+      background: var(--pale);
+      border-radius: 14px;
+    }
+    .price { font-size: 1.8rem; font-weight: bold; }
+    label { display: block; font-weight: bold; margin-top: 15px; }
+    input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #9aabc1;
+      border-radius: 7px;
+      font-size: 1rem;
+    }
+    button {
+      background: var(--blue);
+      color: white;
+      border: 0;
+      border-radius: 8px;
+      padding: 13px 20px;
+      font-size: 1rem;
+      margin-top: 18px;
+      cursor: pointer;
+    }
+    .small { font-size: 0.9rem; }
+    footer {
+      background: var(--navy);
+      color: white;
+      padding: 24px 6%;
+      text-align: center;
+    }
+    footer a { color: white; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>BayReady</strong>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#interest">Register interest</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p><strong>Built for small independent Irish garages</strong></p>
+      <h1>Know which cars are ready, without chasing paper notes.</h1>
+      <p class="intro">
+        BayReady is a prototype garage job tracker designed for
+        independent repair businesses with 3–6 mechanics and
+        one office administrator.
+      </p>
+      <a class="button"
+         href="https://x25181254-sketch.github.io/kehoes-garage-demo/">
+        Try the working demo
+      </a>
+      <p class="small">
+        Student prototype using fictional jobs.
+        Not a live commercial service.
+      </p>
+    </section>
+
+    <section id="features">
+      <h2>Less confusion between the workshop and the office</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Workshop updates</h3>
+          <p>Mechanics tap a button to move a job through
+          five repair stages, without typing.</p>
+        </div>
+        <div class="card">
+          <h3>Customer lookup</h3>
+          <p>A customer can look up a fictional sample job
+          using a job number or registration.</p>
+        </div>
+        <div class="card">
+          <h3>Office overview</h3>
+          <p>See jobs grouped by stage, overdue parts warnings,
+          and how many cars are ready to collect.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlight">
+      <h2>The problem we're exploring</h2>
+      <p>
+        In a busy small garage, staff may spend time checking
+        the workshop, answering calls about repair progress,
+        and remembering which cars are waiting for parts.
+        BayReady explores whether a simple status tracker
+        could make that information easier to find.
+      </p>
+    </section>
+
+    <section id="pricing">
+      <h2>Proposed pricing</h2>
+      <div class="card">
+        <p class="price">€99 setup + €29/month</p>
+        <p>
+          Assumed pricing for this student business concept.
+          No payment is taken and subscriptions are not available.
+        </p>
+      </div>
+    </section>
+
+    <section id="interest">
+      <h2>Interested in the idea?</h2>
+      <p>
+        Try this demonstration form. It displays a thank-you
+        message only and does not send or save your details.
+      </p>
+      <form id="interestForm">
+        <label for="garage">Garage name (optional)</label>
+        <input id="garage" type="text" placeholder="Example Garage">
+
+        <label for="email">Email (optional)</label>
+        <input id="email" type="email" placeholder="name@example.com">
+
+        <button type="submit">Show thank-you message</button>
+      </form>
+      <p id="thanks" role="status" aria-live="polite"></p>
+      <p class="small">
+        Demo only. No information is submitted, stored,
+        or sent anywhere.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>BayReady — Student concept and prototype</p>
+    <p><a href="notes.html">Read the project notes</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("interestForm")
+      .addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("thanks").textContent =
+          "Thank you for your interest! This is a demo only.";
+        this.reset();
+      });
+  </script>
+</body>
+</html>
